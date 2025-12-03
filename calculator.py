@@ -24,7 +24,7 @@ class Calculator():
     Button(width=11, height=4, text='7', relief='flat', bg='white', command=lambda:self.show('7')).place(x=0, y=275)
 
     Button(width=11, height=4, text='8', relief='flat', bg='white', command=lambda:self.show('8')).place(x=180, y=275)
-    Button(width=11, height=4, text='8', relief='flat', bg='white', command=lambda:self.show('9')).place(x=90, y=275)
+    Button(width=11, height=4, text='9', relief='flat', bg='white', command=lambda:self.show('9')).place(x=90, y=275)
     Button(width=11, height=4, text='0', relief='flat', bg='white', command=lambda:self.show('0')).place(x=90, y=350)
     Button(width=11, height=4, text='.', relief='flat', bg='white', command=lambda:self.show('.')).place(x=180, y=350)
     Button(width=11, height=4, text='+', relief='flat', bg='white', command=lambda:self.show('+')).place(x=270, y=275)
@@ -32,8 +32,8 @@ class Calculator():
     Button(width=11, height=4, text='-', relief='flat', bg='white', command=lambda:self.show('-')).place(x=270, y=200)
     Button(width=11, height=4, text='/', relief='flat', bg='white', command=lambda:self.show('/')).place(x=270, y=50)
     Button(width=11, height=4, text='*', relief='flat', bg='white', command=lambda:self.show('*')).place(x=270, y=125)
-    Button(width=11, height=4, text='=', relief='flat', bg='lightblue', command=lambda:self.solve).place(x=270, y=350)
-    Button(width=11, height=4, text='C', relief='flat', bg='white', command=lambda:self.clear).place(x=0, y=350)
+    Button(width=11, height=4, text='=', relief='flat', bg='lightblue', command=lambda:self.solve()).place(x=270, y=350)
+    Button(width=11, height=4, text='C', relief='flat', bg='white', command=lambda:self.clear()).place(x=0, y=350)
 
   def show(self, value):
     self.entry_value += str(value)
@@ -44,8 +44,9 @@ class Calculator():
     self.equation.set(self.entry_value)
 
   def solve(self):
-    result = eval.set(self.entry_value)
+    result = eval(self.entry_value)
     self.equation.set(result)
 
 root = Tk()
 run = Calculator(root)
+root.mainloop()
