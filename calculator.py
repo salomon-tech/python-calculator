@@ -31,10 +31,10 @@ class Calculator():
     Button(width=12, height=4, text='9',bd=4,font=(20), relief='flat', bg='black', fg='white', command=lambda:self.show('9')).place(x=240, y=352)
     Button(width=12, height=4, text='+',bd=4,font=(20), relief='flat', bg='orange', fg='white', command=lambda:self.show('+')).place(x=363, y=352)
 
-    Button(width=12, height=4, text='C',bd=4,font=(20), relief='flat', bg='black', fg='white', command=lambda:self.clear()).place(x=0, y=442)
+    Button(width=12, height=4, text='C',bd=4,font=(20), relief='flat', bg='blue', fg='white', command=lambda:self.clear()).place(x=0, y=442)
     Button(width=12, height=4, text='0',bd=4,font=(20), relief='flat', bg='black', fg='white', command=lambda:self.show('0')).place(x=123, y=442)
     Button(width=12, height=4, text='.',bd=4,font=(20), relief='flat', bg='orange', fg='white', command=lambda:self.show('.')).place(x=240, y=442)
-    Button(width=12, height=4, text='=',bd=4,font=(20), relief='flat', bg='orange', command=lambda:self.solve()).place(x=363, y=442)
+    Button(width=12, height=4, text='=',bd=4,font=(20), relief='flat', bg='blue',fg='white', command=lambda:self.solve()).place(x=363, y=442)
 
   def show(self, value):
     self.entry_value += str(value)
